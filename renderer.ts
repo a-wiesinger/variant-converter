@@ -24,15 +24,12 @@ function CopyTextTimer(arg: string): void {
 // Button click events
 // Convert button
 convertButton.addEventListener('click', async () => {
-    console.log('You clicked the button');
     catCodeOutput.innerHTML = userInput.value;
-    // let shopVariantCode = userInput.value.replace(/,/g, '-');
     variantOutput.innerHTML = userInput.value.replace(/,/g, '-');
 });
 
 // Close button
 closeButton.addEventListener('click', async () => {
-    console.log('Clicked close');
     ipcRenderer.send('close-clicked', 'closed');
 });
 
