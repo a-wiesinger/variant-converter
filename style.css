@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+#main-window {
+    width: 800px;
+    height: 335px;
+    border-radius: 5px;
+    background-color: gray;
+    overflow: hidden;
+}
+
+#menu-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 35px;
+    background-color: rgb(142 215 231);
+    padding-left: .2rem;
+    z-index: 1;
+}
+
+#menu-title {
+    color: #323232;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 35px;
+    user-select: none;
+    -webkit-app-region: drag;
+}
+
+#user-input {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: block;
+    height: 2rem;
+    padding: .2rem;
+    margin-bottom: 5px;
+}
+
+/*         */
+/* Buttons */
+/*         */
+#close-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    user-select: none;  
+}
+
+#convert-button {
+    display: inline-block;
+    /* grid-column-start: 2;
+    grid-column-end: 3; */
+    width: 200px;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-style: none;
+    user-select: none;
+}
+
+#convert-button:hover {
+    background-color: white;
+}
+
+#convert-button:active {
+    background-color: rgb(142 215 231);
+}
+
+#clear-button {
+    display: inline-block;
+    /* grid-column-start: 2;
+    grid-column-end: 3; */
+    width: 200px;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-style: none;
+    user-select: none;
+}
+
+#clear-button:hover {
+    background-color: rgb(241, 199, 185);
+}
+
+#clear-button:active {
+    background-color: rgb(236, 137, 106);
+}
+
+#copy-variant-btn,
+#copy-catalog-code-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: rgb(197, 197, 197);
+}
+
+#copy-variant-btn:hover,
+#copy-catalog-code-btn:hover {
+    background-color: white;
+}
+
+#copy-variant-btn:active,
+#copy-catalog-code-btn:active {
+    background-color: rgb(142 215 231);
+}
+
+#variant-code,
+#catalog-code {
+    padding: .3rem .2rem .2rem .2rem;
+    height: 2rem;
+    width: 100%;
+    background-color: rgb(231, 231, 231);
+}
+
+#variant-code {
+    margin-bottom: 10px;
+}
+
+#catalog-code {
+    margin-bottom: 20px;
+}
+
+#variant-code-label,
+#catalog-code-label,
+#input-label {
+    display: inline-block;
+    color: white;
+    border-radius: 3px 3px 0px 0px;
+    background-color: rgb(104 104 104);
+    width: 160px;
+    padding: 5px;
+    user-select: none;
+}
+
+/*              */
+/* Copy / Paste */
+/*              */
+#variant-id-copied,
+#catalog-code-copied {
+    display: inline-block;
+    user-select: none;
+    color: white;
+    opacity: 0;
+    transition: all 0.25s ease-in-out; 
+}
+
+/*          */
+/* Wrappers */
+/*          */
+.content-wrapper {
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 1fr, 1fr, 1fr, 1fr, 1fr;
+    grid-template-columns: 23px 1fr 23px;
+    align-items: center;
+    height: 307px;
+}
+
+.field-wrapper {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-wrapper {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.variant-code-output-wrapper {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.catalog-code-output-wrapper {
+    display: flex;
+    justify-content: flex-start;
+}
