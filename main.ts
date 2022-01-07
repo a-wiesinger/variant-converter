@@ -38,23 +38,19 @@ app.on('window-all-closed', () => {
 
 // IPC Process to see when button is clicked
 ipcMain.on('close-clicked', (event, args) => {
-    console.log('Close App');
     app.quit();
 });
 
 // Events to add text to system clipboard
 ipcMain.on('copy-variant-clicked', (event, args) => {
-    console.log('Copied Variant ID: ', args);
     clipboard.writeText(args);
 });
 
 ipcMain.on('copy-catalog-code-clicked', (event, args) => {
-    console.log('Copied Catalog Code: ', args);
     clipboard.writeText(args);
 });
 
 // Reload page
 ipcMain.on('clear-page', (event, args) => {
-    console.log('Clearing Page');
     win.reload();
 });
