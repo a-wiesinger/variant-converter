@@ -25,9 +25,12 @@ function CopyTextTimer(arg: string): void {
 // Convert button
 convertButton.addEventListener('click', async () => {
     console.log('You clicked the button');
-    catCodeOutput.innerHTML = userInput.value;
-    // let shopVariantCode = userInput.value.replace(/,/g, '-');
+    // Replace commas
     variantOutput.innerHTML = userInput.value.replace(/,/g, '-');
+    // Remove spaces and put into Variant
+    variantOutput.innerHTML = userInput.value.replace(/ /g, '');
+    // Remove spaces and put into SKU
+    catCodeOutput.innerHTML = userInput.value.replace(/ /g, '');
 });
 
 // Close button

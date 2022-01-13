@@ -62,9 +62,12 @@ function CopyTextTimer(arg) {
 convertButton.addEventListener('click', function () { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
         console.log('You clicked the button');
-        catCodeOutput.innerHTML = userInput.value;
-        // let shopVariantCode = userInput.value.replace(/,/g, '-');
+        // Replace commas
         variantOutput.innerHTML = userInput.value.replace(/,/g, '-');
+        // Remove spaces and put into Variant
+        variantOutput.innerHTML = userInput.value.replace(/ /g, '');
+        // Remove spaces and put into SKU
+        catCodeOutput.innerHTML = userInput.value.replace(/ /g, '');
         return [2 /*return*/];
     });
 }); });
